@@ -1,7 +1,6 @@
 user_string = 0
 result = 0
 
-
 def listFromString(string: str):
     user_list = string.replace(' ', '').strip()
     user_list = user_list.replace('+', ' + ').replace('-', ' - ')\

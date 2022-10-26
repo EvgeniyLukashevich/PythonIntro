@@ -1,10 +1,6 @@
-import logger
 import model
 
-
-
 def inputError():
-    # logger.logger('Ошибка ввода данных')
     return print('Ошибка ввода данных')
 
 def inputString():
