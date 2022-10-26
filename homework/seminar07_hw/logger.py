@@ -1,12 +1,7 @@
 import datetime
 
-path = 'log.txt'
-string = ''
-def logger(info: str):
-    global string
-    datetime.datetime.now()
-    string = str(datetime.datetime.now())[:-7] + ' : ' + info
-    with open(path, 'a', encoding='UTF-8') as data:
-        data.write(f'{string}\n')
-
-
+def logging(data: str):
+    time_format = "%Y-%m-%d %H:%M:%S"
+    now = datetime.datetime.now()     
+    with open ('homework\seminar07_hw\log.txt', 'a', encoding="utf-8") as f:
+        f.write(f'{now:{time_format}} : {data}\n')

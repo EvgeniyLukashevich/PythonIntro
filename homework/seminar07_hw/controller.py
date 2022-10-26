@@ -1,39 +1,31 @@
+from collections import UserString
 import logger
 import model
 import view
 
+def mergeModules():
+    view.inputString()
+    exp_list = model.listFromString(model.user_string)
+    
+    while len(exp_list) < 2:
+        view.inputError()
+        view.inputString()
+        exp_list = model.listFromString(model.user_string)
+        logger.logging(f'{model.user_string} - Непростительная ошибка ввода')   
+            
+    while len(exp_list) >= 2:
+        if '*' in exp_list or '/' in exp_list:
+                exp_list = model.primeAction(exp_list)
+        elif '+' in exp_list or '-' in exp_list:
+            exp_list = model.nextAction(exp_list)
+ 
+    model.result = exp_list[0]
+    logger.logging(f'{model.user_string} = {model.result}')
+    view.printResult()
 
-def input_integer(enter):
-    while True:
-        try:
-            a = int(input(enter))
-            return a
-        except:
-            view.error_value()
 
 
-def input_operation(enter):
-    while True:
-        a = input(enter)
-        if a in ['+', '-', '*', '/', '=']:
-            return a
-        else:
-            view.error_value()
 
-def operation():
-    match (model.ops):
-        case '+':
-            model.total = model.first + model.second
-        case '-':
-            model.total = model.first - model.second
-        case '*':
-            model.total = model.first * model.second
-        case '/':
-            while model.second == 0:
-                print('На ноль делить нельзя!')
-                model.init_second()
-            model.total = int(model.first / model.second)
 
-        case _:
-            view.error_value()
-    logger.logger(f'{model.first} {model.ops} {model.second} = {model.total}')
+
+

@@ -1,4 +1,4 @@
-# Python Intro. 5th Seminar. Homework
+# Python Intro. 6th Seminar. Homework
 - ## Просмотреть свои предыдущие ДЗ и попробовать применить к ним lambda, filter, map, zip, enumerate, list comprehension, там где это возможно
 
 *Формат сдачи: создаем новый репозиторий, в первую часть (закомментированную) вставляем изначальную версию задания, во вторую с изменениями. Отправляем так же ссылкой два-три примера, желательно с разными примерами (lambda, filter, map, zip, enumerate, list comprehension)*
