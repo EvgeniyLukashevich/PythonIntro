@@ -1,4 +1,4 @@
-from collections import UserString
+
 import logger
 import model
 import view
