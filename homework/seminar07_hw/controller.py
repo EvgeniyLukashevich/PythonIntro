@@ -1,4 +1,3 @@
-
 import logger
 import model
 import view
