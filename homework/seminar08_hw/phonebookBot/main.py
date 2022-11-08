@@ -4,7 +4,7 @@ import logger as log
 import botMessages as bM
 import models
 
-bot = telebot.TeleBot('5656676373:AAFwnluOWRO0bmF10BGaq4LQZFLFqoRYaSo')
+bot = telebot.TeleBot('token')
 
 @bot.message_handler(commands=["start", "старт"])
 def start(message):
